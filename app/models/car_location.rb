@@ -1,0 +1,2 @@
+class CarLocation < ApplicationRecord
+end

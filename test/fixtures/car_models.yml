@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  year: 1
+  manufacturer: MyString
+  model: MyString
+  cylinders: 1
+  fueltype: MyString
+  drive: MyString
+  type: 
+
+two:
+  year: 1
+  manufacturer: MyString
+  model: MyString
+  cylinders: 1
+  fueltype: MyString
+  drive: MyString
+  type: 

@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: 9.99
+  odometer: 1
+  condition: MyString
+  VIN: MyString
+  description: MyText
+  transmission: MyString
+  car_seller: one
+  car_model: one
+  car_location: one
+
+two:
+  price: 9.99
+  odometer: 1
+  condition: MyString
+  VIN: MyString
+  description: MyText
+  transmission: MyString
+  car_seller: two
+  car_model: two
+  car_location: two
