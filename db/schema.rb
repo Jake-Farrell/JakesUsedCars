@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_08_002546) do
+ActiveRecord::Schema.define(version: 2022_02_08_231839) do
 
   create_table "car_locations", force: :cascade do |t|
     t.string "state"
     t.decimal "lat"
-    t.decimal "lng"
+    t.string "long"
     t.string "region"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -24,11 +24,11 @@ ActiveRecord::Schema.define(version: 2022_02_08_002546) do
   create_table "car_models", force: :cascade do |t|
     t.integer "year"
     t.string "manufacturer"
-    t.string "model"
+    t.string "modelnumber"
     t.integer "cylinders"
     t.string "fueltype"
     t.string "drive"
-    t.string "type"
+    t.string "carbodytype"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -5,6 +5,4 @@ class CarSale < ApplicationRecord
 
   validates :price, :VIN, :odometer, presence: true
   validates :VIN, uniqueness: true
-
-
 end

@@ -1,0 +1,17 @@
+<h1></h1>
+
+<div class = "columns">
+<div class = "column">
+<h2 class = "column" > Jake Website</h2>
+
+<ol class="ml-5">
+<% @cars.each do |car|%>
+<li>
+<%=  car.price %>
+<em><%= car.description %></em>
+</li>
+<%end%>
+</ol>
+
+</div>
+</div>

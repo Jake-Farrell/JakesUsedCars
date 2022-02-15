@@ -3,17 +3,17 @@
 one:
   year: 1
   manufacturer: MyString
-  model: MyString
+  modelnumber: MyString
   cylinders: 1
   fueltype: MyString
   drive: MyString
-  type: 
+  carbodytype: MyString
 
 two:
   year: 1
   manufacturer: MyString
-  model: MyString
+  modelnumber: MyString
   cylinders: 1
   fueltype: MyString
   drive: MyString
-  type: 
+  carbodytype: MyString
