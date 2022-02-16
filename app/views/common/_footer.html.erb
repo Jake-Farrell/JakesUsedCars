@@ -1,0 +1,11 @@
+<hr>
+<footer>
+<p><em>this is a footer</em></p>
+<ul class="mt-5">
+
+<% cms_pages.each do |page| %>
+  <li><%= link_to page.title, '/home/About' %></li>
+<% end %>
+
+</ul>
+</footer>

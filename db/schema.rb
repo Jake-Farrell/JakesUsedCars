@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_08_231839) do
+ActiveRecord::Schema.define(version: 2022_02_15_194957) do
 
   create_table "car_locations", force: :cascade do |t|
     t.string "state"
@@ -55,6 +55,14 @@ ActiveRecord::Schema.define(version: 2022_02_08_231839) do
     t.integer "age"
     t.text "phoneNumber"
     t.text "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "pages", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.string "permlink"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

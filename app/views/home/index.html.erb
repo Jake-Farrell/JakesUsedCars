@@ -7,7 +7,7 @@
 <ol class="ml-5">
 <% @cars.each do |car|%>
 <li>
-<%=  car.price %>
+<%= car.price %>
 <em><%= car.description %></em>
 </li>
 <%end%>
@@ -15,3 +15,4 @@
 
 </div>
 </div>
+<%= render partial: 'common/footer'%>

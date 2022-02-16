@@ -15,6 +15,7 @@ CarSale.delete_all
 CarLocation.delete_all
 CarModel.delete_all
 CarSeller.delete_all
+Page.delete_all
 
 
 CarLocation.create(
@@ -105,6 +106,9 @@ Cars.each do |m|
   end
 
 end
+
+Page.create(title: "Where got this data", content: " The main data source I plan to use for this project is a large CSV file from kaggle containing over 100,000 records of cars that have sold online to use this dummy data used for Jakes used car website another source that I'll be getting data from is the sellers and to do that I will be using faker to generate over 60,000 unique sellers on the website." ,permlink: "About")
+#Page.create(title: "Contact us", content: "Good luck trying to contact me lol" ,permlink: "Contact")
 
 puts CarLocation.count
 puts CarModel.count
