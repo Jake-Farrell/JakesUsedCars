@@ -10,7 +10,7 @@ class CarsController < ApplicationController
 
   def search
     wildcard_search = "%#{params[:keywords]}%"
-    @movies = Movie.where("title LIKE ? ",wildcard_search)
+    @CarSaleFinds = CarSale.where("description LIKE ? ",wildcard_search)
   end
 
 end

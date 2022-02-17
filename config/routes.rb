@@ -3,7 +3,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   resources :pages ,excecpt: [:show]
-  resources :cars
+  resources :cars do
+    collection do
+      get "search"
+    end
+  end
   get 'home/index'
   get 'home/About'
   get 'cars/index'

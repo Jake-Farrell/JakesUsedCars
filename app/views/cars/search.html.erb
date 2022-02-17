@@ -1,0 +1,10 @@
+<p class = "mb-5">
+  Found <%= pluralize(@CarSaleFinds.count, "Car")%> when searching for: <%= params[:keywords]%>
+</p>
+<ul>
+<% @CarSaleFinds.each do |carsale|%>
+<ul>
+<li><%= link_to "show", car_path(carsale) %>
+</ul>
+<%end%>
+</ul>
