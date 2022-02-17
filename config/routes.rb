@@ -3,10 +3,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   resources :pages ,excecpt: [:show]
+  resources :cars
   get 'home/index'
   get 'home/About'
   get 'cars/index'
-  get 'cars/shoow'
+  get 'cars/:id', to: 'cars#show'
   root "home#index"
   get '/pages/:permlink' => "pages#permlink", as: 'permlink'
 end
