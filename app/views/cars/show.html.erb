@@ -1,29 +1,51 @@
+<%= render partial: 'common/header'%>
 <h2 class= "title is 2">
 
-<%= movie.title%>
-
+<%= @car.car_model.year%>
+<%= @car.car_model.modelnumber%>
+</h2>
 <article class="message is-dark">
 <div class="message-header">
 <p>Description</p>
 </div>
 <div class="message-body">
-<%= movie.description%>
+<%= @car.description%>
 </div>
 <article>
 
 <p class = 'md-5'>
+<strong>Manufacturer </strong>
+<%= @car.car_model.manufacturer %>
+</p>
+<p class = 'md-5'>
+<strong>Cylinders </strong>
+<%= @car.car_model.cylinders %>
+</p>
+<strong>Transmission </strong>
+<%= @car.car_model.drive %>
+</p>
+
+<p class = 'md-5'>
 <strong>Price  </strong>
-<%= movie.Price%>
+<%= @car.price%>
 </p>
 <p>
 <strong>Condition</strong>
-<%= movie.Condition%>
+<%= @car.condition%>
 </p>
 <p>
 <strong>VIN </strong>
-<%= movie.VIN%>
+<%= @car.VIN%>
+</p>
+<h3>Contact info</h3>
+<p>
+<%= @car.car_seller.name%>
 </p>
 <p>
-<strong>Production company</strong>
-<%= movie.production_company.name%>
+<%= @car.car_seller.phoneNumber%>
 </p>
+<p>
+<%= @car.car_seller.email%>
+</p>
+
+<%= render partial: 'common/footer'%>
