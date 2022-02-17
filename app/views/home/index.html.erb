@@ -1,14 +1,17 @@
-<h1></h1>
+<%= render partial: 'common/header'%>
+<h1>New cars Sales</h1>
 
 <div class = "columns">
 <div class = "column">
-<h2 class = "column" > Jake Website</h2>
+
 
 <ol class="ml-5">
 <% @cars.each do |car|%>
 <li>
 <%= car.price %>
-<em><%= car.description %></em>
+<em><%= car.odometer %></em>
+<em><%= car.odometer %></em>
+<em><%= link_to car.id, cars_index_path%></em>
 </li>
 <%end%>
 </ol>

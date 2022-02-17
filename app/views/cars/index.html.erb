@@ -1,0 +1,20 @@
+<%= render partial: 'common/header'%>
+<h1>New cars Sales</h1>
+
+<div class = "columns">
+<div class = "column">
+
+
+<ol class="ml-5">
+<% @cars.each do |car|%>
+<li>
+<%= car.price %>
+<em><%= car.odometer %></em>
+
+</li>
+<%end%>
+</ol>
+
+</div>
+</div>
+<%= render partial: 'common/footer'%>

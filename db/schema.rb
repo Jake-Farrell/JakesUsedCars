@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_15_194957) do
+ActiveRecord::Schema.define(version: 2022_02_16_221547) do
 
   create_table "car_locations", force: :cascade do |t|
     t.string "state"
@@ -59,10 +59,25 @@ ActiveRecord::Schema.define(version: 2022_02_15_194957) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "locations", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "models", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "pages", force: :cascade do |t|
     t.string "title"
     t.text "content"
     t.string "permlink"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "sellers", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

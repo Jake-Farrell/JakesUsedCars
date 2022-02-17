@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :pages ,excecpt: [:show]
   get 'home/index'
   get 'home/About'
+  get 'cars/index'
+  get 'cars/shoow'
   root "home#index"
   get '/pages/:permlink' => "pages#permlink", as: 'permlink'
 end
