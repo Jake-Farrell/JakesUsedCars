@@ -1,6 +1,8 @@
 class CarsController < ApplicationController
   def index
-    @cars = CarSale.includes(:car_location).order("price DESC").limit(20)
+    #@cars = CarSale.includes(:car_location).order("price DESC").limit(20)
+    @cars = Kaminari.paginate_array(CarSale.first(300)).page(params[:page])
+
   end
 
   def show

@@ -107,7 +107,7 @@ Cars.each do |m|
 
 end
 
-Page.create(title: "Where got this data", content: " The main data source I plan to use for this project is a large CSV file from kaggle containing over 100,000 records of cars that have sold online to use this dummy data used for Jakes used car website another source that I'll be getting data from is the sellers and to do that I will be using faker to generate over 60,000 unique sellers on the website." ,permlink: "About")
+Page.create(title: "Where got this data", content: "  The main data source I plan to use for this project is a large CSV file from Kaggle containing over 400,000 records of car sales listed on different car websites the first thing that I did was go through the data entirely I remove columns that I wouldn't need such as type since a majority of the time it was left blank or didn't provide any relevant information as well as making sure each vehicle identification number or VIN was unique after going through that process I had taken out around 300,000 rows of useless or duplicated data because individuals could post the same ad with one minor change and it would count as a completely different row which led to the database being massive in size as well as containing a lot of data that wasn't useful as well as removing columns that were mostly left blank or were irrelevant to the project as a whole also for another aspect of this project I decided to use fake are to fake seller information since since the CSV file that I was using did not contain any  seller info." ,permlink: "About")
 #Page.create(title: "Contact us", content: "Good luck trying to contact me lol" ,permlink: "Contact")
 
 puts CarLocation.count

@@ -1,0 +1,16 @@
+<%= render partial: 'common/header'%>
+
+
+
+<ol class="ml-5">
+<% @sellers.each do |seller|%>
+<li>
+<%= seller.name %>
+<em><%= seller.phoneNumber %></em>
+<em><%= link_to "show", sellers_path(seller) %></em>
+
+</li>
+<%end%>
+</ol>
+<%= debug @sellers %>
+<%= render partial: 'common/footer'%>

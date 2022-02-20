@@ -29,6 +29,8 @@ gem "jbuilder"
 
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 
+gem 'kaminari', :git => 'https://github.com/kaminari/kaminari.git', :branch => 'master'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

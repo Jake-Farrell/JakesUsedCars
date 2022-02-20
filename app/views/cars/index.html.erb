@@ -23,6 +23,8 @@
 <em><%= link_to "show", car_path(car) %></em>
 </li>
 <%end%>
+<%= paginate @cars %>
+<%= page_entries_info @cars %>
 </ol>
 
 </div>

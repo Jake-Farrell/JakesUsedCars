@@ -5,9 +5,8 @@
 <ol class="mt-5">
   <th><%= link_to "Home", root_path%></th>
   <th><%= link_to "Cars", cars_path() %></th>
-  <th>Cars</th>
   <th>Car Models</th>
-  <th>Car Sellers</th>
+  <th><%= link_to "Sellers", sellers_path() %></th>
   <th>Car locations</th>
   <% cms_pages.each do |page| %>
   <th><%= link_to page.title, '/home/About' %></th>
