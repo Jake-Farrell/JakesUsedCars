@@ -5,7 +5,7 @@ class SellersController < ApplicationController
 
   def show
   @seller = CarSeller.find(params[:id])
-  #@car = CarSale.find(21031)
+  @carlistings = CarSale.where("car_seller_id = ? ",params[:id])
   end
 
 end

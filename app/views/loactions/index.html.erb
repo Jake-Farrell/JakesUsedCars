@@ -1,14 +1,34 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Loactions</h1>
 
-<div id="loactions">
-  <% @loactions.each do |loaction| %>
-    <%= render loaction %>
-    <p>
-      <%= link_to "Show this loaction", loaction %>
-    </p>
-  <% end %>
+
+<%= render partial: 'common/header'%>
+<h1>Loaction</h1>
+
+<div class = "columns">
+<div class = "column">
+
+
+<ol class="ml-5">
+<% @loactions.each do |loaction|%>
+<li>
+<%= loaction.state %>
+<em><%= loaction.region %></em>
+<em><%= link_to "See on a map", loactions_path(loaction) %></em>
+</li>
+<%end%>
+<%= paginate @loactions %>
+<%= page_entries_info @loactions %>
+</ol>
+
+
+<p>
+<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=1000x1000&center=#{100},#{-100}&key=#{'AIzaSyCRYFKAAL1L7FHCEm3gz4d-F3dI_ywkMMY'}", alt: "Map" %>
+</p>
+
 </div>
+</div>
+<%= render partial: 'common/footer'%>
 
-<%= link_to "New loaction", new_loaction_path %>
+
+

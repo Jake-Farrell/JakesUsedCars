@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_16_221547) do
+ActiveRecord::Schema.define(version: 2022_02_20_205759) do
 
   create_table "car_locations", force: :cascade do |t|
     t.string "state"
@@ -55,6 +55,11 @@ ActiveRecord::Schema.define(version: 2022_02_16_221547) do
     t.integer "age"
     t.text "phoneNumber"
     t.text "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "loactions", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

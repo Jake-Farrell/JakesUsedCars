@@ -7,7 +7,7 @@
 <li>
 <%= seller.name %>
 <em><%= seller.phoneNumber %></em>
-<em><%= link_to "show", sellers_path(seller) %></em>
+<em> <a href="/sellers/<%= seller.id %>">see all listings</a></em>
 
 </li>
 <%end%>

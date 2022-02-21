@@ -8,6 +8,7 @@
   <th>Car Models</th>
   <th><%= link_to "Sellers", sellers_path() %></th>
   <th>Car locations</th>
+  <th><%= link_to "locations", loactions_path() %></th>
   <% cms_pages.each do |page| %>
   <th><%= link_to page.title, '/home/About' %></th>
   <% end %>

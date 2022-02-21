@@ -1,5 +1,15 @@
 <%= render partial: 'common/header'%>
 
 
+<ol class="ml-5">
+<% @carlistings.each do |seller|%>
+<li>
+<%= seller.price %>
+<em><%= seller.VIN %></em>
+<em> <a href="/cars/<%= seller.id %>">see this listing</a></em>
+
+</li>
+<%end%>
+</ol>
 
 <%= render partial: 'common/footer'%>
