@@ -14,7 +14,7 @@
 <li>
 <%= loaction.state %>
 <em><%= loaction.region %></em>
-<em><%= link_to "See on a map", loactions_path(loaction) %></em>
+<em> <a href="/loactions/<%= loaction.id %>">show on map</a></em>
 </li>
 <%end%>
 <%= paginate @loactions %>
@@ -22,9 +22,7 @@
 </ol>
 
 
-<p>
-<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=1000x1000&center=#{100},#{-100}&key=#{'AIzaSyCRYFKAAL1L7FHCEm3gz4d-F3dI_ywkMMY'}", alt: "Map" %>
-</p>
+
 
 </div>
 </div>

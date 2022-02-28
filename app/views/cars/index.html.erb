@@ -8,6 +8,12 @@
     <div class= "control is-expanded">
       <%= text_field_tag(:keywords, nil ,class: "input", placeholder: "Find the right Car")%>
     </div>
+    <div class="form_row">
+    <label for="theme">search useing:</label>
+    <% [ 'description','Vin', 'price',  'odometer' ].each do |theme| %>
+    <li><%=theme %> <input  class="color_input" id="theme" name="color" type="radio" value=<%=theme %> /><li>
+    <% end %>
+    </div>
     <div class="control">
       <%= submit_tag("Search" , class: "button is-priamry")%>
     </div>

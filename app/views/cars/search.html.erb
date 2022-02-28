@@ -1,10 +1,20 @@
+<%= render partial: 'common/header'%>
 <p class = "mb-5">
   Found <%= pluralize(@CarSaleFinds.count, "Car")%> when searching for: <%= params[:keywords]%>
 </p>
 <ul>
 <% @CarSaleFinds.each do |carsale|%>
 <ul>
-<li><%= link_to "show", car_path(carsale) %>
+
+<li>Car Model Year <%= carsale.car_model.year%></li>
+<li>Car Manufacturer <%= carsale.car_model.manufacturer%></li>
+<li>Price <%= carsale.price%></li>
+<li><%= link_to "show", car_path(carsale) %></li>
 </ul>
 <%end%>
+<%= paginate @CarSaleFinds %>
+<%= page_entries_info @CarSaleFinds %>
+</ol>
+
 </ul>
+<%= render partial: 'common/footer'%>

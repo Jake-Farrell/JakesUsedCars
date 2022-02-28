@@ -1,10 +1,16 @@
-<p style="color: green"><%= notice %></p>
 
-<%= render @loaction %>
+<%= render partial: 'common/header'%>
+<h1>Loaction</h1>
 
-<div>
-  <%= link_to "Edit this loaction", edit_loaction_path(@loaction) %> |
-  <%= link_to "Back to loactions", loactions_path %>
+<div class = "columns">
+<div class = "column">
 
-  <%= button_to "Destroy this loaction", @loaction, method: :delete %>
+
+
+<p>
+<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=7&size=1000x1000&center=#{@loaction.lat},#{@loaction.long}&markers=size:small%7Ccolor:red%7C#{@loaction.lat},#{@loaction.long}&key=#{'AIzaSyCRYFKAAL1L7FHCEm3gz4d-F3dI_ywkMMY'}", alt: "Map" %>
+</p>
+
 </div>
+</div>
+<%= render partial: 'common/footer'%>

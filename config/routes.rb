@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get 'sellers/index'
   get 'cars/:id', to: 'cars#show'
   get 'sellers/:id', to: 'sellers#show'
-  get "/loactions/:id", to: "loactions#show"
+  get "loactions/:id", to: "loactions#show"
   root "home#index"
   get '/pages/:permlink' => "pages#permlink", as: 'permlink'
 end

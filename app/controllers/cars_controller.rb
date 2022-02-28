@@ -12,7 +12,8 @@ class CarsController < ApplicationController
 
   def search
     wildcard_search = "%#{params[:keywords]}%"
-    @CarSaleFinds = CarSale.where("description LIKE ? ",wildcard_search)
+    #@CarSaleFinds = CarSale.where("description LIKE ? ",wildcard_search)
+    @CarSaleFinds = Kaminari.paginate_array(CarSale.where("description LIKE ? ",wildcard_search)).page(params[:page])
   end
 
 end
