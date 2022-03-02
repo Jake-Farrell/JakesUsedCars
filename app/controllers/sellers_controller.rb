@@ -1,6 +1,6 @@
 class SellersController < ApplicationController
   def index
-    @sellers = CarSeller.includes(:car_sales).order("name DESC").limit(20)
+    @sellers = CarSeller.includes(:car_sales).order("name DESC").limit(200)
   end
 
   def show

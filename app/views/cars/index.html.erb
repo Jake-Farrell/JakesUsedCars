@@ -7,15 +7,12 @@
         <div class= "control is-expanded">
           <%= text_field_tag(:keywords, nil ,class: "input", placeholder: "Find the right Car")%>
           <div class="form_row">
-            <%= radio_button_tag(:search_type,true,"Description")%>
-            <%= radio_button_tag(:search_type, "VIN")%>
-            <%= radio_button_tag(:search_type,"Price")%>
-            <label> Search by:</label>
-            <input type="radio" checked="checked" id="post_category_Description" name="category" value="Description" />
+          <label> Search by:</label>
+            <%= radio_button_tag(:search_type,"Description", true)%>
             <label for="post_category_Description">Description</label>
-            <input  type="radio" id="post_category_VIN" name="category"  value="VIN" />
+            <%= radio_button_tag(:search_type, "VIN", false)%>
             <label for="post_category_VIN">VIN</label>
-            <input type="radio" id="post_category_Price" name="category" value="Price" />
+            <%= radio_button_tag(:search_type,"Price",false )%>
             <label for="post_category_Price">Price</label>
           </div>
         </div>
