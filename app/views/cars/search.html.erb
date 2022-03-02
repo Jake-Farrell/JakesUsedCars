@@ -3,6 +3,11 @@
   Found <%= pluralize(@CarSaleFinds.count, "Car")%> when searching for: <%= params[:keywords]%>
 </p>
 <ul>
+<%= @wildcard_search %>
+<%= @search_type_other %>
+<% params.each do |key,value|%>
+ <% Rails.logger.warn "Param #{key}: #{value}" %>
+<%end%>
 <% @CarSaleFinds.each do |carsale|%>
 <ul>
 

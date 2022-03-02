@@ -1,16 +1,9 @@
 
 <header>
-
 <h2 class = "column" > Jake Website</h2>
 <ol class="mt-5">
-  <th><%= link_to "Home", root_path%></th>
-  <th><%= link_to "Cars", cars_path() %></th>
-  <th>Car Models</th>
-  <th><%= link_to "Sellers", sellers_path() %></th>
-  <th><%= link_to "Car locations", loactions_path() %></th>
-  <% cms_pages.each do |page| %>
-  <th><%= link_to page.title, '/home/About' %></th>
-  <% end %>
-<hr>
+  <li><%= link_to "Home", root_path%>  <%= link_to "Cars", cars_path() %> Car Models <%= link_to "Sellers", sellers_path() %> <%= link_to "Car locations", loactions_path() %>   <% cms_pages.each do |page| %>
+  <%= link_to page.title, '/home/About' %>
+  <% end %></li>
 </ol>
 </header>

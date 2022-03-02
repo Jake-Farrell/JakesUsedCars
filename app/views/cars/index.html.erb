@@ -1,25 +1,33 @@
 <%= render partial: 'common/header'%>
 <h1>New cars Sales</h1>
-
 <div class = "columns">
-<div class = "column">
-<%= form_with(url: search_cars_path , method: :get, local: true) do %>
-  <div class= "field is-grouped mb-5">
-    <div class= "control is-expanded">
-      <%= text_field_tag(:keywords, nil ,class: "input", placeholder: "Find the right Car")%>
-    </div>
-    <div class="form_row">
-    <label for="theme">search useing:</label>
-    <% [ 'description','Vin', 'price',  'odometer' ].each do |theme| %>
-    <li><%=theme %> <input  class="color_input" id="theme" name="color" type="radio" value=<%=theme %> /><li>
-    <% end %>
-    </div>
-    <div class="control">
-      <%= submit_tag("Search" , class: "button is-priamry")%>
-    </div>
+  <div class = "column">
+    <%= form_with(url: search_cars_path , method: :get, local: true) do %>
+      <div class= "field is-grouped mb-5">
+        <div class= "control is-expanded">
+          <%= text_field_tag(:keywords, nil ,class: "input", placeholder: "Find the right Car")%>
+          <div class="form_row">
+            <%= radio_button_tag(:search_type,true,"Description")%>
+            <%= radio_button_tag(:search_type, "VIN")%>
+            <%= radio_button_tag(:search_type,"Price")%>
+            <label> Search by:</label>
+            <input type="radio" checked="checked" id="post_category_Description" name="category" value="Description" />
+            <label for="post_category_Description">Description</label>
+            <input  type="radio" id="post_category_VIN" name="category"  value="VIN" />
+            <label for="post_category_VIN">VIN</label>
+            <input type="radio" id="post_category_Price" name="category" value="Price" />
+            <label for="post_category_Price">Price</label>
+          </div>
+        </div>
+      </div>
+      <div class="control">
+        <%= submit_tag("Search" , class: "button is-priamry")%>
+      </div>
+    <%end%>
   </div>
+</div>
 
-<%end%>
+
 
 <ol class="ml-5">
 <% @cars.each do |car|%>
@@ -29,10 +37,8 @@
 <em><%= link_to "show", car_path(car) %></em>
 </li>
 <%end%>
+</ol>
 <%= paginate @cars %>
 <%= page_entries_info @cars %>
-</ol>
 
-</div>
-</div>
 <%= render partial: 'common/footer'%>
