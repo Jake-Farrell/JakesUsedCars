@@ -4,14 +4,12 @@
 <%= @car.car_model.year%>
 <%= @car.car_model.modelnumber%>
 </h2>
-<article class="message is-dark">
 <div class="message-header">
 <p>Description</p>
 </div>
 <div class="message-body">
 <%= @car.description%>
 </div>
-<article>
 
 <p class = 'md-5'>
 <strong>Manufacturer </strong>
@@ -21,6 +19,7 @@
 <strong>Cylinders </strong>
 <%= @car.car_model.cylinders %>
 </p>
+<p class = 'md-5'>
 <strong>Transmission </strong>
 <%= @car.car_model.drive %>
 </p>

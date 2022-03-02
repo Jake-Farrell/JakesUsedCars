@@ -8,18 +8,18 @@
 <% params.each do |key,value|%>
  <% Rails.logger.warn "Param #{key}: #{value}" %>
 <%end%>
+</ul>
 <% @CarSaleFinds.each do |carsale|%>
 <ul>
-
 <li>Car Model Year <%= carsale.car_model.year%></li>
 <li>Car Manufacturer <%= carsale.car_model.manufacturer%></li>
 <li>Price <%= carsale.price%></li>
 <li><%= link_to "show", car_path(carsale) %></li>
 </ul>
 <%end%>
+
 <%= paginate @CarSaleFinds %>
 <%= page_entries_info @CarSaleFinds %>
-</ol>
 
-</ul>
+
 <%= render partial: 'common/footer'%>
